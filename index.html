@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular IMC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+</head>
+<body class="container">
+    <section class="container__titulo">
+        <h1 class="titulo__texto">Calcule seu IMC</h1>
+    </section>
+    <hr class="titulo__traço">
+
+    <!--Informações iniciais para calculo-->
+    <section class="informacoes__inicio">
+        <div class="container__peso">
+            <p class="container__peso__titulo"><span class="span">Peso: </span></p>
+            <input type="number" name="peso" id="peso" placeholder="(KG)" class="input__peso">
+        </div>
+        
+        <div class="container__altura">
+            <p class="container__altura__titulo"><span class="span">Altura:</span></p>
+            <input type="number" name="altura" id="altura" placeholder="(metros)" class="input__altura">
+        </div>
+        <div class="container__botao">
+            <button onclick="calcular()" type="button" class="botao__calcular">Calcular</button>
+        </div>
+    </section>
+
+    <!--Tabela -->
+    <section class="tabela">
+        <div class="tabela__itens">
+            <p class="IMC"></p>
+            <p class="peso__ideal"></p>
+            <p class="peso__perder"></p>
+        </div>
+    </section>
+
+    <!--Tabela Valores -->
+    <table class="tabela__valores">
+        <tr class="etapas">
+            <td class="etapas__titulo"></td>
+        </tr>
+        <thead class="tabela__cabecalho">
+            <tr class="tabela__texto">
+                <td class="texto__peso"></td>
+                <td class="texto__imc"></td>
+            </tr>
+        </thead>
+
+        <tbody class="tabela__conteudo">
+            <tr class="tabela__texto">
+                <td class="texto__valor__peso1"></td>
+                <td class="texto__valor__imc1"></td>
+            </tr>
+    
+            <tr class="tabela__texto">
+                <td class="texto__valor__peso2"></td>
+                <td class="texto__valor__imc2"></td>
+            </tr>
+    
+            <tr class="tabela__texto">
+                <td class="texto__valor__peso3"></td>
+                <td class="texto__valor__imc3"></td>
+            </tr> 
+        </tbody> 
+    </table>
+
+    <!-- Rodape -->
+    <section class="rodape" id="mostrar__esconder" style="display: none;">
+        <div class="rodape__container">
+            <p class="rodape__texto">Tempo para alcançar o objetivo (semanas):</p>
+            <input type="number" id="objetivo__semana" name="objetivo__semana" placeholder="" class="objetivo__semana">
+        </div>
+        <div class="rodape__texto2">
+            <p class="rodape__texto__segundo"></p>
+        </div>
+        <div class="rodape__botao">
+            <button onclick="porSemanas()" type="button" class="botao__calcular">Calcular</button>
+        </div>
+    </section>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
